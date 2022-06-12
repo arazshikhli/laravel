@@ -13,13 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'MainController@home');
+Route::get('/', function (){
+    return view('home');
+});
+Route::get('/about', function (){
+    return view('about');
+});
+Route::get('/galery', function (){
+    return view('galery');
+});
+Route::get('/contact', function (){
+    return view('contact');
+});
 
-Route::get('/about', 'MainController@about');
 
-Route::get('/contact', 'MainController@contact');
 
-Route::get('/galery','MainController@galery');
 
 
 //Route::get('/user/{id}/{name}',function ($id,$name){
